@@ -62,8 +62,12 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
       ),
-      body: ListView(
-        physics: const ScrollPhysics(),
+      body: GestureDetector(
+        onTap: () => primaryFocus?.unfocus(),
+        behavior: HitTestBehavior.translucent,
+        child: ListView(
+          keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+          physics: const ScrollPhysics(),
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
         children: [
           // Avatar + name preview
@@ -152,6 +156,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ),
           ),
         ],
+        ),
       ),
     );
   }

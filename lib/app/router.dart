@@ -1,6 +1,9 @@
 import 'package:go_router/go_router.dart';
 import '../features/dashboard/view/dashboard_screen.dart';
 import '../features/expenses/view/expenses_screen.dart';
+import '../features/expenses/view/add_expense_screen.dart';
+import '../features/expenses/view/expense_detail_screen.dart';
+import '../features/expenses/model/expense_model.dart';
 import '../features/budget/view/budget_screen.dart';
 import '../features/settings/view/settings_screen.dart';
 import 'bottom_nav_bar.dart';
@@ -36,6 +39,17 @@ final appRouter = GoRouter(
               const NoTransitionPage(child: SettingsScreen()),
         ),
       ],
+    ),
+    GoRoute(
+      path: '/expenses/add',
+      name: 'add-expense',
+      builder: (context, state) => const AddExpenseScreen(),
+    ),
+    GoRoute(
+      path: '/expenses/detail',
+      name: 'expense-detail',
+      builder: (context, state) =>
+          ExpenseDetailScreen(expense: state.extra as Expense),
     ),
   ],
 );

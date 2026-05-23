@@ -101,7 +101,7 @@ class _CustomNavBar extends StatelessWidget {
                   Expanded(
                     child: GestureDetector(
                       behavior: HitTestBehavior.opaque,
-                      onTap: () {},
+                    onTap: () => context.push('/expenses/add'),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
