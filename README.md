@@ -47,6 +47,17 @@ State is managed by Riverpod `Notifier` classes. ViewModels hold business logic,
 
 ---
 
+## Screenshots
+
+<p float="left">
+  <img src="screenshots/dashboard.png" width="22%" />
+  <img src="screenshots/expenses.png" width="22%" />
+  <img src="screenshots/add_expense.png" width="22%" />
+  <img src="screenshots/settings.png" width="22%" />
+</p>
+
+---
+
 ## Getting Started
 
 **Prerequisites:** Flutter 3.x with Dart SDK 3.9.2 or higher.
@@ -64,16 +75,6 @@ flutter run
 
 ---
 
-## Running Tests
-
-```bash
-flutter test
-```
-
-Tests are organised by feature under `test/features/`. They cover the repository layer, viewmodel logic, currency input formatting, and basic widget smoke tests.
-
----
-
 ## Design Decisions
 
 **Hive over SQLite** — for a single-user expense tracker the schema is simple enough that a key-value store works well, and Hive avoids the need for any native platform dependencies.
@@ -83,10 +84,3 @@ Tests are organised by feature under `test/features/`. They cover the repository
 **`ExpenseFormScreen` shared between Add and Edit** — rather than maintaining two nearly-identical forms, a single screen accepts an optional `Expense` parameter. When it's null the screen is in "add" mode; when it's provided it's in "edit" mode with a delete option.
 
 **GoRouter `ShellRoute`** — the persistent bottom navigation bar is implemented as a shell so tab switching doesn't rebuild the scaffold on every navigation.
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
