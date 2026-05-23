@@ -10,5 +10,6 @@ void main() async {
     debugPrint = (String? message, {int? wrapWidth}) {};
   }
   await Hive.initFlutter();
+  await Hive.openBox<String>('userSettings');
   runApp(const ProviderScope(child: App()));
 }
