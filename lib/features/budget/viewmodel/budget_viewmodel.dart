@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../model/category_model.dart';
+import '../model/budget_model.dart';
 
-class CategoriesNotifier extends Notifier<List<Category>> {
+class BudgetNotifier extends Notifier<List<Category>> {
   @override
   List<Category> build() => [];
 
@@ -21,6 +21,6 @@ class CategoriesNotifier extends Notifier<List<Category>> {
   }
 }
 
-final categoriesProvider =
-    NotifierProvider<CategoriesNotifier, List<Category>>(
-        CategoriesNotifier.new);
+final budgetProvider =
+    NotifierProvider<BudgetNotifier, List<Category>>(
+        BudgetNotifier.new);
