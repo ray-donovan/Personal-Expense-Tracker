@@ -1,6 +1,6 @@
 # Personal Expense Tracker
 
-A Flutter app for tracking personal expenses, built as a take-home assignment. The app lets users log expenses by category, view a monthly spending summary, and manage their data entirely on-device — no backend required.
+A Flutter app for tracking personal expenses. The app lets users log expenses by category, view a monthly spending summary, and manage their data entirely on-device — no backend required.
 
 ---
 
